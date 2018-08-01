@@ -1,6 +1,6 @@
 {
   "name": "tomzheka-hexlet-step1",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "project on hexlet(brain-games)",
   "bin": {
     "brain-games": "dist/bin/brain-games.js"
@@ -23,6 +23,11 @@
     "url": "https://github.com/TomZheka/project-lvl1-s316/issues"
   },
   "homepage": "https://github.com/TomZheka/project-lvl1-s316#readme",
+  "keywords": [
+    "hexlet",
+    "project",
+    "brain-games"
+  ],
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
