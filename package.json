@@ -1,8 +1,8 @@
 {
   "name": "tomzheka-hexlet-step1",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "1.0.1",
+  "description": "project on hexlet(brain-games)",
+  "keywords": "project, learn, hexlet",
    "bin": {
      "brain-games": "dist/bin/brain-games.js"
    },
@@ -18,7 +18,7 @@
     "type": "git",
     "url": "git+https://github.com/TomZheka/project-lvl1-s316.git"
   },
-  "author": "",
+  "author": "Evgen Tomskih",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/TomZheka/project-lvl1-s316/issues"
