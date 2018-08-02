@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
-import { welcome } from '..';
+import { welcome, questionName } from '..';
  
 welcome();
+questionName();
