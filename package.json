@@ -3,7 +3,7 @@
   "version": "1.0.5",
   "description": "project on hexlet(brain-games)",
   "bin": {
-    "brain-games": "dist/bin/brain-games.js"
+    "brain-games": "./dist/bin/brain-games.js"
   },
   "files": [
     "dist"
