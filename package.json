@@ -1,6 +1,6 @@
 {
   "name": "tomzheka-hexlet-step1",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "project on hexlet(brain-games)",
   "bin": {
     "brain-games": "./dist/bin/brain-games.js"
@@ -9,6 +9,7 @@
     "dist"
   ],
   "scripts": {
+    "eslint": "eslint",
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
     "babel-node": "babel-node",
     "prepublishOnly": "npm run build"
@@ -31,8 +32,12 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.6",
     "babel-preset-env": "^1.7.0",
-    "babel-preset-stage-0": "^6.24.1"
+    "babel-preset-stage-0": "^6.24.1",
+    "eslint": "^5.2.0",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0"
   },
   "dependencies": {
     "readline-sync": "^1.4.9"
