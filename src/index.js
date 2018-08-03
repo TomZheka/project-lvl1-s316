@@ -2,33 +2,35 @@
 
 import readlineSync from 'readline-sync';
 
-export const welcome = () => {
+const welcome = () => {
   console.log('Welcome to the Brain Games! \n');
 };
 
-export const questionName = () => {
+const questionName = () => {
+  welcome();
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName} \n`);
   return userName;
 };
-export const gameEven = () => {
+
+const gameEven = () => {
+  welcome();
   console.log('Answer "yes" if number even otherwise answer "no".');
+  const countQuestion = 3;
   const userName = questionName();
-  for (let stepCount = 0; stepCount < 3; stepCount += 1) {
+
+  for (let stepCount = 0; stepCount < countQuestion; stepCount += 1) {
     const question = Math.floor(Math.random() * 100);
     console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
-    const worngAnswer = question % 2 === 0 ? 'yes' : 'no';
-    const correctAnswer = question % 2 === 0 ? 'no' : 'yes';
-    if (answer === worngAnswer) {
+    const correctAnswer = question % 2 === 0 ? 'yes' : 'no';
+    if (answer === correctAnswer) {
       console.log('Correct!');
     } else {
-      console.log(`'${worngAnswer}' is wrong answer ;( . Correct answer was '${correctAnswer}'. Let's try again, ${userName}`);
-      break;
-    }
-
-    if (stepCount === 2) {
-      console.log(`Congratulations, ${userName}`);
+      return console.log(`'${answer}' is wrong answer ;( . Correct answer was '${correctAnswer}'. Let's try again, ${userName}`);
     }
   }
+  return console.log(`Congratulations, ${userName}`);
 };
+
+export default gameEven;
