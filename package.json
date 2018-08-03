@@ -1,6 +1,6 @@
 {
   "name": "tomzheka-hexlet-step1",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "project on hexlet(brain-games)",
   "bin": {
     "brain-games": "./dist/bin/brain-games.js",
@@ -38,6 +38,7 @@
     "babel-preset-stage-0": "^6.24.1",
     "eslint": "^5.2.0",
     "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-babel": "^5.1.0",
     "eslint-plugin-import": "^2.13.0"
   },
   "dependencies": {

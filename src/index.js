@@ -3,21 +3,22 @@
 import readlineSync from 'readline-sync';
 
 export const welcome = () => {
-  console.log('Welcome to the Brain Games!');
+  console.log('Welcome to the Brain Games! \n');
 };
 
 export const questionName = () => {
   const userName = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${userName}`);
+  console.log(`Hello, ${userName} \n`);
   return userName;
 };
-export const gameEven = (userName) => {
-  let stepCount = 0;
-  do {
-    const num = Math.floor(Math.random() * 100);
-    console.log(`Question: ${num}`);
+export const gameEven = () => {
+  console.log('Answer "yes" if number even otherwise answer "no".');
+  const userName = questionName();
+  for (let stepCount = 0; stepCount < 3; stepCount += 1) {
+    const question = Math.floor(Math.random() * 100);
+    console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
-    if ((answer === 'yes' && (num % 2 === 0)) || (answer === 'no' && !(num % 2 === 0))) {
+    if ((answer === 'yes' && (question % 2 === 0)) || (answer === 'no' && !(question % 2 === 0))) {
       console.log('Correct!');
     } else if (answer === 'yes') {
       console.log(`'no' is wrong answer ;( . Correct answer was 'yes'. Let's try again, ${userName}`);
@@ -33,6 +34,5 @@ export const gameEven = (userName) => {
     if (stepCount === 2) {
       console.log(`Congratulations, ${userName}`);
     }
-    stepCount += 1;
-  } while (stepCount < 3);
+  }
 };
