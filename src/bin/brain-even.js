@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import gameEven from '..';
+import { game, randomNumber, isEven } from '..';
 
-gameEven();
+game('Answer "yes" if number even otherwise answer "no".', randomNumber, isEven, 20, 80);

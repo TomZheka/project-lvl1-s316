@@ -12,17 +12,17 @@ const questionName = () => {
   return userName;
 };
 
-const gameEven = () => {
+export const game = (msg, funcQuestion, checkAnswer, arg1, arg2) => {
   welcome();
-  console.log('Answer "yes" if number even otherwise answer "no".');
+  console.log(msg);
   const countQuestion = 3;
   const userName = questionName();
 
   for (let stepCount = 0; stepCount < countQuestion; stepCount += 1) {
-    const question = Math.floor(Math.random() * 100);
+    const question = funcQuestion(arg1, arg2);
     console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
-    const correctAnswer = question % 2 === 0 ? 'yes' : 'no';
+    const correctAnswer = String(checkAnswer(question));
     if (answer === correctAnswer) {
       console.log('Correct!');
     } else {
@@ -32,4 +32,25 @@ const gameEven = () => {
   return console.log(`Congratulations, ${userName}`);
 };
 
-export default gameEven;
+export const randomNumber = () => Math.floor(Math.random() * 100);
+
+export const isEven = number => (number % 2 === 0 ? 'yes' : 'no');
+
+export const example = (number1, number2) => {
+  const arraySing = ['+', '-', '*'];
+  return `${number1()} ${arraySing[Math.floor(Math.random() * arraySing.length)]} ${number2()}`;
+};
+
+export const isCorrectExample = (question) => {
+  const array = question.split(' ');
+  let result = 0;
+  if (array[1] === '+') {
+    result = parseInt(array[0], 10) + parseInt(array[2], 10);
+  } else if (array[1] === '-') {
+    result = parseInt(array[0], 10) - parseInt(array[2], 10);
+  } else {
+    result = parseInt(array[0], 10) * parseInt(array[2], 10);
+  }
+
+  return result;
+};
