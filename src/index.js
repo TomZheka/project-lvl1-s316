@@ -7,7 +7,6 @@ const welcome = () => {
 };
 
 const questionName = () => {
-  welcome();
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName} \n`);
   return userName;
