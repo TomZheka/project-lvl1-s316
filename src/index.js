@@ -18,16 +18,12 @@ export const gameEven = () => {
     const question = Math.floor(Math.random() * 100);
     console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
-    if ((answer === 'yes' && (question % 2 === 0)) || (answer === 'no' && !(question % 2 === 0))) {
+    const worngAnswer = question % 2 === 0 ? 'yes' : 'no';
+    const correctAnswer = question % 2 === 0 ? 'no' : 'yes';
+    if (answer === worngAnswer) {
       console.log('Correct!');
-    } else if (answer === 'yes') {
-      console.log(`'no' is wrong answer ;( . Correct answer was 'yes'. Let's try again, ${userName}`);
-      break;
-    } else if (answer === 'no') {
-      console.log(`'yes' is wrong answer ;( . Correct answer was 'no'. Let's try again, ${userName}`);
-      break;
     } else {
-      console.log('incorrect data');
+      console.log(`'${worngAnswer}' is wrong answer ;( . Correct answer was '${correctAnswer}'. Let's try again, ${userName}`);
       break;
     }
 
