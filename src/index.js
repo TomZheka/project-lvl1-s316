@@ -12,7 +12,7 @@ const questionName = () => {
   return userName;
 };
 
-export const game = (msg, funcQuestion, checkAnswer, arg1, arg2) => {
+const game = (msg, funcQuestion, checkAnswer, arg1, arg2) => {
   welcome();
   console.log(msg);
   const countQuestion = 3;
@@ -32,16 +32,16 @@ export const game = (msg, funcQuestion, checkAnswer, arg1, arg2) => {
   return console.log(`Congratulations, ${userName}`);
 };
 
-export const randomNumber = () => Math.floor(Math.random() * 100);
+const randomNumber = () => Math.floor(Math.random() * 100);
 
-export const isEven = number => (number % 2 === 0 ? 'yes' : 'no');
+const isEven = number => (number % 2 === 0 ? 'yes' : 'no');
 
-export const example = (number1, number2) => {
+const example = (number1, number2) => {
   const arraySing = ['+', '-', '*'];
   return `${number1()} ${arraySing[Math.floor(Math.random() * arraySing.length)]} ${number2()}`;
 };
 
-export const isCorrectExample = (question) => {
+const isCorrectExample = (question) => {
   const array = question.split(' ');
   let result = 0;
   if (array[1] === '+') {
@@ -55,9 +55,9 @@ export const isCorrectExample = (question) => {
   return result;
 };
 
-export const gcd = (number1, number2) => `${number1()} ${number2()}`;
+const gcd = (number1, number2) => `${number1()} ${number2()}`;
 
-export const isCorrectGcd = (question) => {
+const isCorrectGcd = (question) => {
   const array = question.split(' ');
   const max = array[0] >= array[1] ? array[0] : array[1];
   let result = 0;
@@ -67,4 +67,16 @@ export const isCorrectGcd = (question) => {
     }
   }
   return result;
+};
+
+export const gameEven = () => {
+  game('Answer "yes" if number even otherwise answer "no".', randomNumber, isEven);
+};
+
+export const gameCalc = () => {
+  game('What is the result of the expression?', example, isCorrectExample, randomNumber, randomNumber);
+};
+
+export const gameGcd = () => {
+  game('Find the greatest common divisor of given numbers.', gcd, isCorrectGcd, randomNumber, randomNumber);
 };
