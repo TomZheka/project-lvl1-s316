@@ -1,12 +1,12 @@
 {
   "name": "tomzheka-hexlet-step1",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "description": "project on hexlet(brain-games)",
   "bin": {
-    "brain-games": "./dist/bin/games/brain-games.js",
-    "brain-even": "dist/bin/games/brain-even/brain-even.js",
-    "brain-calc": "dist/bin/games/brain-calc/brain-calc.js",
-    "brain-gcd": "dist/bin/games/brain-gcd/brain-gcd.js"
+    "brain-games": "./dist/bin/brain-games.js",
+    "brain-even": "dist/bin/brain-even.js",
+    "brain-calc": "dist/bin/brain-calc.js",
+    "brain-gcd": "dist/bin/brain-gcd.js"
   },
   "files": [
     "dist"
