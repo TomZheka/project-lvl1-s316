@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import game from '../..';
+import game from '..';
 
 export const randomNumber = () => Math.floor(Math.random() * 100);
 

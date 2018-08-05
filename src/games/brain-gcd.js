@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-import game from '../..';
-import { randomNumber } from '../brain-even';
+import game from '..';
+import { randomNumber } from './brain-even';
 
 const gcd = (number1, number2) => `${number1()} ${number2()}`;
 
