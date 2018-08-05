@@ -1,7 +1,4 @@
-#!/usr/bin/env node
-
-import game from '..';
-import { randomNumber } from './brain-even';
+import { game } from '..';
 
 const gcd = (number1, number2) => `${number1()} ${number2()}`;
 
@@ -18,7 +15,7 @@ const isCorrectGcd = (question) => {
 };
 
 const gameGcd = () => {
-  game('Find the greatest common divisor of given numbers.', gcd, isCorrectGcd, randomNumber, randomNumber);
+  game('Find the greatest common divisor of given numbers.', gcd, isCorrectGcd);
 };
 
 export default gameGcd;

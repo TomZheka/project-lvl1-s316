@@ -1,7 +1,4 @@
-#!/usr/bin/env node
-
-import game from '..';
-import { randomNumber } from './brain-even';
+import { game } from '..';
 
 
 const example = (number1, number2) => {
@@ -24,7 +21,7 @@ const isCorrectExample = (question) => {
 };
 
 const gameCalc = () => {
-  game('What is the result of the expression?', example, isCorrectExample, randomNumber, randomNumber);
+  game('What is the result of the expression?', example, isCorrectExample);
 };
 
 export default gameCalc;

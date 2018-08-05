@@ -2,6 +2,10 @@
 
 import readlineSync from 'readline-sync';
 
+const countQuestion = 3;
+
+export const randomNumber = () => Math.floor(Math.random() * 100);
+
 const welcome = () => {
   console.log('Welcome to the Brain Games! \n');
 };
@@ -12,14 +16,13 @@ const questionName = () => {
   return userName;
 };
 
-const game = (msg, funcQuestion, checkAnswer, arg1, arg2) => {
+export const game = (msg, funcQuestion, checkAnswer) => {
   welcome();
   console.log(msg);
-  const countQuestion = 3;
   const userName = questionName();
 
   for (let stepCount = 0; stepCount < countQuestion; stepCount += 1) {
-    const question = funcQuestion(arg1, arg2);
+    const question = funcQuestion(randomNumber, randomNumber);
     console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
     const correctAnswer = String(checkAnswer(question));
@@ -31,5 +34,3 @@ const game = (msg, funcQuestion, checkAnswer, arg1, arg2) => {
   }
   return console.log(`Congratulations, ${userName}`);
 };
-
-export default game;

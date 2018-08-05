@@ -1,8 +1,4 @@
-#!/usr/bin/env node
-
-import game from '..';
-
-export const randomNumber = () => Math.floor(Math.random() * 100);
+import { randomNumber, game } from '..';
 
 const isEven = number => (number % 2 === 0 ? 'yes' : 'no');
 
