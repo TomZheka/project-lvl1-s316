@@ -1,4 +1,4 @@
-import { game } from '..';
+import game from '..';
 
 const gcd = (number1, number2) => `${number1()} ${number2()}`;
 

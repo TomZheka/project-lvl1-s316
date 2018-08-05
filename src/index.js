@@ -1,10 +1,9 @@
 #!/usr/bin/env node
 
 import readlineSync from 'readline-sync';
+import randomNumber from './utils';
 
 const countQuestion = 3;
-
-export const randomNumber = () => Math.floor(Math.random() * 100);
 
 const welcome = () => {
   console.log('Welcome to the Brain Games! \n');
@@ -16,7 +15,7 @@ const questionName = () => {
   return userName;
 };
 
-export const game = (msg, funcQuestion, checkAnswer) => {
+const game = (msg, funcQuestion, checkAnswer) => {
   welcome();
   console.log(msg);
   const userName = questionName();
@@ -34,3 +33,5 @@ export const game = (msg, funcQuestion, checkAnswer) => {
   }
   return console.log(`Congratulations, ${userName}`);
 };
+
+export default game;

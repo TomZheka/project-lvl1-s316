@@ -1,6 +1,6 @@
 {
   "name": "tomzheka-hexlet-step1",
-  "version": "1.0.22",
+  "version": "1.0.23",
   "description": "project on hexlet(brain-games)",
   "bin": {
     "brain-games": "./dist/bin/brain-games.js",

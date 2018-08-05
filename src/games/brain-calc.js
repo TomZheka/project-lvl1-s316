@@ -1,4 +1,4 @@
-import { game } from '..';
+import game from '..';
 
 
 const example = (number1, number2) => {

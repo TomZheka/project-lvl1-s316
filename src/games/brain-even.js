@@ -1,4 +1,5 @@
-import { randomNumber, game } from '..';
+import game from '..';
+import randomNumber from '../utils';
 
 const isEven = number => (number % 2 === 0 ? 'yes' : 'no');
 
